@@ -6,7 +6,7 @@ function errorHandler(rsp,message){
         'Content-Type': 'application/json'
     }; 
     rsp.writeHead(400, headers);
-    rsp.write(JSON.stringify({
+    rsp.write(JSON.stringify({  
                 "status": "failed",
                 "message": message
         }));

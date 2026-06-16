@@ -1,0 +1,148 @@
+{
+  "info": {
+    "_postman_id": "b1f25654-9559-487b-b933-9db52df7db26",
+    "name": "Todos - local",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "55596175",
+    "_collection_link": "https://go.postman.co/collection/55596175-b1f25654-9559-487b-b933-9db52df7db26?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Get All todo",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "127.0.0.1:8080/todos",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8080",
+          "path": [
+            "todos"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Add a new todo",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{ \"title\" : \"曾文與南化水庫相互調水　挺過今年旱象\" }",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "127.0.0.1:8080/todos",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8080",
+          "path": [
+            "todos"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Delete all todo",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "127.0.0.1:8080/todos",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8080",
+          "path": [
+            "todos"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Delete a todo",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "127.0.0.1:8080/todos/b0b4a9ad-c3ef-4ce3-b69c-3fba096ff1f7",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8080",
+          "path": [
+            "todos",
+            "b0b4a9ad-c3ef-4ce3-b69c-3fba096ff1f7"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Update a todo",
+      "request": {
+        "method": "PATCH",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"title\" :\"儒儒今天生 買個蛋塔吧 還要加蠟燭\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "127.0.0.1:8080/todos/2d8510d4-6a1f-453a-9506-9957bce14c27",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8080",
+          "path": [
+            "todos",
+            "2d8510d4-6a1f-453a-9506-9957bce14c27"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
