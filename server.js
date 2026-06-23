@@ -1,18 +1,11 @@
-const http = require("http");
-const { v4: uuidv4 } = require("uuid");
-//這裏的id 在網頁未重新post之前會一直是同一個，會導致新增的待辦事項id相同，所以要放在requestListener裡面，每次post請求都會產生新的id
-//const  id = uuidv4(); 
-const errHandler = require('./errorHandler');
+import http from "http";
+import { v4 as uuidv4 } from "uuid";
+import errHandler from './errorHandler.js';  
+import headers from './header.js';  
 const todos =[];
 
 const requestListener = (req, rsp) => {
     console.log(req.method);
-    const headers = {
-        'Access-Control-Allow-Headers': 'Content-Type, Authorization, Content-Length, X-Requested-With',
-        'Access-Control-Allow-Origin': '*',
-        'Access-Control-Allow-Methods': 'PATCH, POST, GET,OPTIONS,DELETE',
-        'Content-Type': 'application/json'
-    };  
 
     let body = '';
     req.setEncoding('utf-8');
