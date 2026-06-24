@@ -99,7 +99,7 @@ const requestListener = (req, rsp) => {
                 errHandler(rsp, err.message);                 
             }            
         });         
-    } else if (req.url === '/todos' && req.method === 'OPTIONS'){
+    } else if (req.method === 'OPTIONS'){
         rsp.writeHead(200, headers);
         rsp.end();
     }else{
